@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Notas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Notas de Alunos</h1>
+    </header>
+
+    <main>
+        <section id="cadastro-aluno-section">
+            <h2>Cadastrar Novo Aluno</h2>
+            <form id="form-aluno">
+                <div class="form-group">
+                    <label for="nome">Nome do Aluno:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="matricula">Matrícula:</label>
+                    <input type="text" id="matricula" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <button type="submit">Cadastrar Aluno</button>
+            </form>
+        </section>
+
+        <section id="lista-alunos-section">
+            <h2>Alunos Cadastrados</h2>
+            <table id="alunos-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Matrícula</th>
+                        <th>E-mail</th>
+                        <th>Média Geral</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="alunos-table-body">
+                    </tbody>
+            </table>
+        </section>
+
+        <section id="registrar-nota-section">
+            <h2>Registrar Nota para Aluno</h2>
+            <form id="form-nota">
+                <div class="form-group">
+                    <label for="matricula-nota">Matrícula do Aluno:</label>
+                    <input type="text" id="matricula-nota" required>
+                </div>
+                <div class="form-group">
+                    <label for="disciplina">Disciplina:</label>
+                    <input type="text" id="disciplina" required>
+                </div>
+                <div class="form-group">
+                    <label for="nota">Nota (0-10):</label>
+                    <input type="number" id="nota" step="0.1" min="0" max="10" required>
+                </div>
+                <button type="submit">Registrar Nota</button>
+            </form>
+        </section>
+
+        <section id="buscar-aluno-section">
+            <h2>Buscar Aluno e Ver Média/Notas</h2>
+            <div class="form-group">
+                <label for="buscar-matricula">Matrícula do Aluno:</label>
+                <input type="text" id="buscar-matricula" required>
+                <button id="btn-buscar">Buscar</button>
+            </div>
+            <div id="info-aluno">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sistema de Gerenciamento de Notas</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
